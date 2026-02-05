@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Theme Switcher</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body bgcolor="blue">
-    <center><h1>sri shanmugha college of engineering</h1></center>
-    <h2>UNDER GRADUATE PROGRAMING(UG)</h2>
-    <h3>bachelor of engineering-B.E</h3>
-    <ol>
-        <li>B.E BIO MEDICAL</li>
-        <li>B.E CSC</li>
-        <li>B.E ECE</li>
-        <li>B.E CS&E</li>
-    </ol><hr>
-    <h3>Bachelor of technology-B.tech</h3>
-    <ol>
-        <li>B.tech agri</li>
-        <li>B.tech ai&ds</li>
-        <li>B.tech it</li>
-    </ol><hr>
-    <h2>post GRADUATE programe (pg)</h2>
-    <h3>master of engineering</h3>
-    <ol>
-        <li>M.E cse</li>
-        <li>M.E ise</li>
-    </ol><hr>
+<body class="light">
 
-    <center><h1>student application form</h1></center>
-    <form>
-        <h3>
-            <pre>
-                name :<input type="text"><br>
-                age :<input type="number"><br>
-                dob :<input type="date"><br>
-                add :<input type="text"><br>
-                gender :<input type="radio" name="gender" value="male">male
-                        <input type="radio" name="gender" value="female">female<br>
-                        computer language :<input type="checkbox">c
-                                           :<input type="checkbox">c++
-                                           :<input type="checkbox">python
-                                            :<input type="checkbox">java
-                                            :<input type="checkbox">none of above <br>
-                        course            :<input type="text"<br>
-                        mobile no         :<input type="number"> <br>
+  <h1>Theme Switcher</h1>
 
-                        <input type="button" value="SUBMIT">
-            </pre>
-        </h3>
-    </form>
-    
+  <form id="settingsForm">
+    <div>
+      <label>Theme:</label>
+      <select id="theme">
+        <option value="">Select theme</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Font Size (12–24px):</label>
+      <input type="number" id="fontSize" min="12" max="24" />
+    </div>
+
+    <div>
+      <label>Primary Color:</label>
+      <input type="color" id="primaryColor" />
+    </div>
+
+    <button type="submit">Apply Settings</button>
+
+    <p id="error" class="error"></p>
+  </form>
+
+  <p class="preview">
+    This text updates based on your preferences.
+  </p>
+
+  <script src="pro.js"></script>
 </body>
 </html>
