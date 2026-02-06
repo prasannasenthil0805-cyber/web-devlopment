@@ -1,27 +1,38 @@
-<h1>nudinja kandupudi</h1>
-<input id="guess">
-<button onclick="click()">click</button>
-<p id="parag">rytu/thappu</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Enrollment Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>AI & Cloud Course Enrollment</h1>
+  </header>
 
-<script>
-    var guess= document.getElementById("guess")
-    var parag= document.getElementById("parag")
-    var randomNumber= Math.floor(Math.random()*10)+1
-    
-    function click()
-    {
-        var enterednmuber = guess.Value
-        if(randomNumber==enterednmuber)
-    {
-        console.log("rytu")
-        result.textcontent="rytu"
-        alert("muttai granted")
-    }
-    else{
-        result.textcontent="thappu"
+  <section class="filter">
+    <label>Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="AI">AI</option>
+      <option value="Cloud">Cloud</option>
+    </select>
+  </section>
 
-    }
+  <main class="container">
+    <section>
+      <h2>Available Courses</h2>
+      <div id="courseList"></div>
+    </section>
 
-    }
-</script>
+    <section class="cart-section">
+      <h2>Enrollment Cart</h2>
+      <div id="cart"></div>
+      <h3>Total Amount: $<span id="total">0</span></h3>
+    </section>
+  </main>
+
+  <script src="pro.js"></script>
+</body>
+</html>
